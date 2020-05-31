@@ -1,4 +1,9 @@
 steps:
   - id: "Rodando docker-compose"
-    name: 'gcr.io/$PROJECT_ID/docker-compose'
+    name: 'gcr.io/$PROJECT_ID/docker-compose:latest'
     args: ['-f', 'docker-compose.cloudbuild.yaml', 'up', '-d']
+
+  # Verifica se todos os serviços subiram
+  - id: "Rodando docker ps"
+    name: 'grc.io/cloud-builders/docker'
+    args: ['ps']
