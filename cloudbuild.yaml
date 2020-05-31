@@ -5,5 +5,5 @@ steps:
 
   # Verifica se todos os serviços subiram
   - id: "Rodando docker ps"
-    name: 'grc.io/cloud-builders/docker'
+    name: 'gcr.io/cloud-builders/docker'
     args: ['ps']
