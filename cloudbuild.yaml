@@ -1,7 +1,4 @@
 steps:
   - id: "Rodando docker-compose"
-  # informar a imagem que o docker tem, para que seja executado o docker-compose
-  # o GCB tem várias imagens que podem ser chamadas
-  # Google Cloud Registry
   name: 'gcr.io/$PROJECT_ID/docker-compose'
   args: ['-f', 'docker-compose.cloudbuild.yaml', 'up', '-d']
